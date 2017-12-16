@@ -5,10 +5,7 @@
 #
 # Currently Supported Operating Systems:
 #
-#   RHEL 5, RHEL 6
-#   CentOS 5, CentOS 6
-#   Debian 7
-#   Ubuntu LTS, Ubuntu 13.04, Ubuntu 13.10
+#   Ubuntu 16.04
 #
 
 # Am I root?
@@ -17,3 +14,11 @@ if [ "x$(id -u)" != 'x0' ]; then
     exit 1
 fi
 
+# Make dir's
+mkdir /root/.ntwice
+
+# Update apt-get
+apt-get update
+
+# Upgrade apt-get
+apt-get upgrade -y
